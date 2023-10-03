@@ -9,7 +9,10 @@ jobs:
         id: hello
         uses: sandra2597/sftp-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          ftp-domain: 'testserversandra.nl'
+          ftp-host: 'ssh.strato.com'
+        env:
+          LFTP_PASSWORD: 'mycustompassword'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
