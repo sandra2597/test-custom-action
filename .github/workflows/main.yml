@@ -7,12 +7,12 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: sandra2597/sftp-action@v1.6
+        uses: sandra2597/sftp-action@v1.7
         with:
           ftp-domain: 'testserversandra.nl'
           ftp-host: 'ssh.strato.com'
         env:
-          LFTP_PASSWORD: 'mycustompassword'
+          LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
