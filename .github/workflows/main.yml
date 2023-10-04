@@ -9,10 +9,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Hello world action step
         id: hello
-        uses: sandra2597/sftp-action@v1.18
+        uses: sandra2597/sftp-action@v1.19
         with:
-          ftp-domain: 'testserversandra.nl'
-          ftp-host: 'ssh.strato.com'
+          ftp_domain: 'testserversandra.nl'
+          ftp_host: 'ssh.strato.com'
           source: 'myapp'
         env:
           LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
