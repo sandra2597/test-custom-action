@@ -9,10 +9,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Send files to server
         id: hello
-        uses: sandra2597/sftp-action@v1.20
+        uses: sandra2597/sftp-action@v1.21
         with:
           ftp_domain: 'testserversandra.nl'
           ftp_host: 'ssh.strato.com'
-          source: 'myapp'
+          source: 'services'
+          target: 'dev'
         env:
           LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
