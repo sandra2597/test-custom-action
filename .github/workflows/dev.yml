@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Send files to server
         id: hello
-        uses: sandra2597/sftp-action@v1.29
+        uses: sandra2597/sftp-action@v1.30
         with:
           ftp_domain: 'testserversandra.nl'
           ftp_host: 'ssh.strato.com'
