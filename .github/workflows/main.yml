@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: sandra2597/sftp-action@v1.14
+        uses: sandra2597/sftp-action@v1.15
         with:
           ftp-domain: 'testserversandra.nl'
           ftp-host: 'ssh.strato.com'
