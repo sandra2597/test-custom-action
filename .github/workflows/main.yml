@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
       - name: Hello world action step
         id: hello
         uses: sandra2597/sftp-action@v1.16
