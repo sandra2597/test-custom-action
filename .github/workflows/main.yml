@@ -13,6 +13,7 @@ jobs:
         with:
           ftp-domain: 'testserversandra.nl'
           ftp-host: 'ssh.strato.com'
+          source: 'myapp'
         env:
           LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       # Use the output from the `hello` step
