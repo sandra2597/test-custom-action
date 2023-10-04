@@ -1,21 +1,18 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  deploy_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Deploy
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
-      - name: Hello world action step
+      - name: Send files to server
         id: hello
-        uses: sandra2597/sftp-action@v1.19
+        uses: sandra2597/sftp-action@v1.20
         with:
           ftp_domain: 'testserversandra.nl'
           ftp_host: 'ssh.strato.com'
           source: 'myapp'
         env:
           LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
